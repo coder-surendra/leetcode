@@ -4,11 +4,12 @@ def removeElement(num,value):
 	count = 0
 	for i in range(len(num)):
 
-		# print(i)
-		if(i != val):
-			count += 1
+		if num[i] != val :
+			print(i)
 			# num.remove(val)
 			num[count] = num[i]
+			count += 1
+			print(num)
 	print('num len = '+str(len(num)))
 	print(num)
 	return  count
