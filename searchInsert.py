@@ -1,3 +1,4 @@
+# problem link : https://leetcode.com/problems/search-insert-position/
 def searchInsert(nums,target):
 	length = len(nums)
 	average = sum(nums)//length
