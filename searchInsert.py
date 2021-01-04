@@ -6,6 +6,12 @@ def searchInsert(nums,target):
 	mid = length// 2
 	print(mid)
 
+	try:
+		index = nums.index(target)
+		return index
+	except:
+		index = 0
+
 	if(target>=average):
 		i = mid
 		while i<length:
@@ -41,4 +47,4 @@ def searchInsert(nums,target):
 
 
 
-print('position = '+str( searchInsert([1,4,6,7,8,9],6) ))
+print('position = '+str( searchInsert([1,4,6,7,8,90],10) ))
