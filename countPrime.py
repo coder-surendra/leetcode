@@ -1,34 +1,28 @@
+# https://leetcode.com/problems/count-primes
 
 def countPrime(n):
-	i = 2
-	if n<=1 :
+
+	if n<=2 :
 		return 0
 
 	primeCount = 0
-	primeList = []
-	while( i < n):
+	primeList = [2]
+	for i in range(3,n,2):
 
-		isPrime = True
-
-		# checking current number is divisible by previous numbers
 		for prime in primeList:
-			if( i % prime == 0):
-				# i is not a prime number
-				isPrime = False
+			# this is other way of writing prime> sqrt(i))
+			if(prime*prime > i):
+				primeList.append(i)
+				break
+			if (i % prime == 0):
 				break
 
 
 
 
-		if(isPrime):
-			primeCount += 1
-			primeList.append(i)
-			print('this number is prime '+str(i))
-
-		i += 1
 	print(primeList)
-	print(primeCount)
+	print(len(primeList))
 
 
 countPrime(30)
-
+# todo : learn about sieve method, which deals with finding prime between 1 and n 
