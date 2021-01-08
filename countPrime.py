@@ -26,3 +26,18 @@ def countPrime(n):
 
 countPrime(30)
 # todo : learn about sieve method, which deals with finding prime between 1 and n 
+
+# best solutions :
+'''
+	if n <2:
+        return 0
+    s=[1]*n #initialze all as prime
+    s[0]=0
+    s[1]=0
+    for i in range(2,int(n**0.5)+1): #look s starts with i*i. since i*x if x<i , it has already been calculated by formmer elements.
+        if s[i]==1:
+            s[i*i::i] = [0] * len(s[i*i::i])
+    return sum(s)
+
+
+'''
