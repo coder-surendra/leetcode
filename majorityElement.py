@@ -1,3 +1,4 @@
+# https://leetcode.com/problems/majority-element/
 from collections import Counter as counter
 def majorityElement(nums):
     n = len(nums)
