@@ -19,3 +19,16 @@ def removeElement(num,value):
 
 print(removeElement([3,2,2,3],3))
 print(removeElement([0,1,2,2,3,0,4,2],2))
+
+
+'''
+
+
+best solution
+
+class Solution:
+    def majorityElement(self, nums: List[int]) -> int:
+        nums.sort()
+        return nums[len(nums)//2]
+
+'''
