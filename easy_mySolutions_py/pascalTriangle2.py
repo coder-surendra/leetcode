@@ -1,4 +1,4 @@
-# https://leetcode.com/problems/pascals-triangle
+# https://leetcode.com/problems/pascals-triangle-ii/
 def pascalTriangle(n):
 
     if(n == 0): 
