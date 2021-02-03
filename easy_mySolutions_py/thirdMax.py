@@ -1,3 +1,4 @@
+# https://leetcode.com/problems/third-maximum-number/
 def thirdMaxfunction(nums):
     nums = list(set(nums))
     n = len(nums)
@@ -41,3 +42,52 @@ def thirdMaxfunction(nums):
     return thirdMax
     
 print(thirdMaxfunction([1,1,2,3,3]))
+
+'''
+
+
+    def thirdMax(self, nums: List[int]) -> int:
+        max = min(nums) - 1       
+        second_max = min(nums) - 1       
+        third_max = min(nums) - 1  
+        for num in set(nums):
+            if num > max:
+                third_max, second_max = second_max, third_max
+                max, second_max = num, max
+            elif num > second_max:
+                second_max, third_max = num, second_max
+            elif num > third_max:
+                third_max = num
+        if len(set(nums)) < 3:
+            return max
+        return third_max
+
+'''
+
+
+'''
+15000 KB submission
+
+import math 
+
+class Solution:
+    def thirdMax(self, nums: List[int]) -> int:
+        
+        f = nums[0]
+        s = -math.inf 
+        t = -math.inf 
+        
+        for num in nums[1:]:
+            if num > f:
+                t = s
+                s = f
+                f = num
+            elif num > s and num < f:
+                t = s
+                s = num
+            elif num > t and num < s:
+                t = num
+        if t == -math.inf:
+            return f
+        return t
+'''
