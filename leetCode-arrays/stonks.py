@@ -16,7 +16,7 @@ def maxProfit(prices):
     
     i = 1
     n = len(prices)
-    while( i <  (n - 1) ):
+    while( i <  n ):
         diff = prices[i] - prices[i-1]
         print('%d - %d = %d'%(prices[i] , prices[i-1] ,diff ))
         if(diff>0):
@@ -24,6 +24,6 @@ def maxProfit(prices):
         i += 1
     return(profit)
 
-# arr = [7,1,5,3,6,4]
-arr = [6,1,3,2,4,7]
+arr = [7,1,5,3,6,4]
+# arr = [6,1,3,2,4,7]
 print(maxProfit(arr))
