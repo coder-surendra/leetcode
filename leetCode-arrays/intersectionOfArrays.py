@@ -7,8 +7,14 @@ def intersection(nums1,nums2):
     while( i < n):
 
         if(nums1[i] in nums2):
-            if(nums1[i] not in nums):
+            number = nums1[i]
+            minCount = min( nums1.count(number) , nums2.count(number))
+
+            if(nums.count(number) < minCount):
                 nums.append(nums1[i])
+
+            # if(nums1[i] not in nums):
+
         i += 1
 
     # print(nums)
