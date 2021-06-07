@@ -1,15 +1,17 @@
 def addOne(nums):
     
-    stringNumber = ''.join(str(nums))
+    stringNumber = ''.join([str(a) for a in nums])
+    print(stringNumber)
     intNumber = int(stringNumber)
 
     intNumber += 1
+    stringNumber = str(intNumber)
+    print(type(stringNumber))
 
-    stringNumber = str(stringNumber)
+    nums1 = list(stringNumber)
 
-    nums = list(stringNumber)
-
-    print(nums)
+    print(nums1)
 
 nums = [1,2,3]
+
 addOne(nums)
